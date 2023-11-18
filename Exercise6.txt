@@ -1,0 +1,77 @@
+Consider a software utility called ‘bq’ that allows the user to read runtime, persistent data structures.
+
+Commands:
+
+bq                               | Starts utility from linux command prompt
+___________________________________________________________________________________________
+rel <relation name> | Specify which data structure, also known as a relation, to access
+___________________________________________________________________________________________
+di                                | Display data structure of relation identified
+___________________________________________________________________________________________
+key                              
+key <key values>      | Request system to prompt for key values for the relation identified, or 
+                        specify the key to read
+___________________________________________________________________________________________
+re k                             | Read the record associated with the key value identified
+___________________________________________________________________________________________
+re f                              | Read the first record
+___________________________________________________________________________________________
+re l                              | Read the last record
+___________________________________________________________________________________________
+re n                             | Read the next record
+___________________________________________________________________________________________
+re p                             | Read the previous record
+___________________________________________________________________________________________
+x                                 | Exit the utility
+___________________________________________________________________________________________
+
+
+Upload into your Github / Gitlab or Bitbucket account a solution for the following problems:
+
+Problem #1
+I have a relation ABC. 
+
+What are the sequence of commands to determine its structure?
+
+*Solution*:
+bq - Begin the utility
+rel ABC - Select the relation, ABC in this case
+di - Then display the relation
+x - Close the utilty 
+
+Problem #2
+
+I have a relation XYZ.                          
+Its structure is noted below:    
+
+XYZ =  { file (B1) of } record
+  B1   : integer;     { block number  } B1
+  Name : Char8;       { B1 name }
+end;   
+
+What are the sequence of commands to read the first and last records of relation XYZ?
+
+*Solution*:
+bq - Begin the utility
+rel XYZ - Select the relation, XYZ in this case
+re f - Read the first record
+re l - Read the last record
+x - Close the utilty 
+
+
+Problem #3
+Continuing with relation XYZ
+
+What are the sequences of commands to read key value 10 and the next 2 records?
+
+*Solution*:
+bq - Begin the utility
+rel XYZ - Select the relation, XYZ in this case
+key 10 - Here the user can input the value of the key he wants, in this case it's 10
+re k - Read the key value the user wanted
+re n - Read the next record
+key n - Go to the next record
+re n - Then Read the next key value
+x - Close the utilty 
+
+
